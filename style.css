@@ -14,6 +14,11 @@ body {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+ul {
+  list-style-type: none;
+  display: flex;
+}
+
 .container {
   max-width: 1440px;
   min-width: 1250px;
@@ -37,6 +42,22 @@ body {
   right: 0;
   margin-left: auto;
   margin-right: auto;
+}
+
+.header-nav__menu {
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  background: green;
+}
+
+.h-nav-item {
+  border-right: 1px solid white;
+}
+
+.h-nav-item:last-child {
+  border-right: none;
 }
 
 .header-text-container {
@@ -67,9 +88,11 @@ body {
 }
 
 .footer {
-  max-width: 1200px;
+  max-width: 1250px;
+  min-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  font-size: 12px;
 }
 
 .f-row,
