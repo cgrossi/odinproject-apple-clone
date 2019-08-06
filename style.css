@@ -14,7 +14,8 @@ body {
 
 body {
   -webkit-font-smoothing: antialiased;
-  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Lucida Sans Regular", Geneva, Verdana, sans-serif;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
+    "Lucida Sans Regular", Geneva, Verdana, sans-serif;
 }
 
 ul {
@@ -40,16 +41,26 @@ a:hover {
 
 .header {
   height: 630px;
-  background: grey;
+  background: url("/assets/your_verse_hero.jpg");
+  background-repeat: no-repeat;
+  background-position-y: 100%;
   position: relative;
   color: white;
   text-align: center;
+  margin-bottom: 2px;
 }
 
 .header-nav {
   width: 980px;
   height: 35px;
-  background: linear-gradient(to bottom, rgb(134, 134, 134) 5%, rgb(122, 122, 122) 50%, rgb(116, 116, 116) 51%, rgb(104, 104, 104) 8%, rgb(124, 124, 124) 94%);
+  background: linear-gradient(
+    to bottom,
+    rgb(134, 134, 134) 5%,
+    rgb(128, 128, 128) 50%,
+    rgb(107, 107, 107) 51%,
+    rgb(99, 99, 99) 8%,
+    rgb(121, 121, 121) 94%
+  );
   position: absolute;
   font-size: 14px;
   top: 75px;
@@ -58,53 +69,67 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
   border-radius: 4px;
-  border:  1px solid rgb(109, 109, 109);
+  border: 1px solid rgb(109, 109, 109);
 }
 
 .header-nav__menu {
   width: 100%;
   height: 100%;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 
 .header-nav input {
-  width: 115px;
-  border-radius: 10px;
+  border-radius: 9px;
   border: none;
 }
 
 .h-nav-item {
-  padding: 0 35px;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
   position: relative;
-  flex-basis: 0;
+  border-right: 1px solid rgba(75, 75, 75, 0.5);
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1);
+}
+
+.h-nav-item span {
+  position: relative;
+  top: 6px;
+}
+
+.h-nav-item:last-of-type {
+  border-right: none;
+  flex-grow: 1;
+  padding-left: 20px;
+}
+
+.h-nav-item input {
+  width: 100px;
+  height: 22px;
+  position: relative;
+  top: 5px;
+  right: 5px;
+  box-shadow: inset 0px 1px 2px rgba(70, 70, 70, 0.7),
+    inset 0 -1px 1px rgba(204, 204, 204, 0.5);
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.h-nav-item input:focus {
+  background: white;
+  width: 200px;
+  outline: none;
+  border: 1px solid rgba(75, 75, 75, 0.8);
 }
 
 .svg-search {
-  width: 15px;
-  height: 14px;
+  width: 14px;
+  height: 13px;
   position: absolute;
-  left: 39px;
-  top: 2px;
+  left: 22px;
+  top: 10px;
 }
-
-/* .h-nav-item::after {
-  content: "";
-  position: absolute;
-  top: -6px;
-  left: 102px;
-  display: block;
-  height: 35px;
-  width: 3px;
-  background: rgb(107, 107, 107);
-  border-left: 1px solid rgb(139, 139, 139);
-  border-right: 1px solid rgb(139, 139, 139);
-}
-
-.h-nav-item:last-of-type::after {
-  position: static;
-  content: normal;
-} */
 
 .header-text-container {
   position: relative;
@@ -119,7 +144,7 @@ a:hover {
 }
 
 .header-subhead {
-  width: 50%;
+  width: 59%;
   padding: 25px 0;
 }
 
@@ -142,7 +167,12 @@ a:hover {
 
 .f-item {
   flex-basis: 24.8%;
+  height: 100%;
   background: rgb(238, 238, 238);
+}
+
+.f-item img {
+  width: 100%;
 }
 
 .footer {
