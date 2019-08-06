@@ -56,7 +56,7 @@ a:hover {
 
 .header {
   height: 630px;
-  background: url("/assets/your_verse_hero.jpg");
+  background: url("./assets/your_verse_hero.jpg");
   background-repeat: no-repeat;
   background-position-y: 100%;
   position: relative;
