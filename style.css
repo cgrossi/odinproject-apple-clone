@@ -10,13 +10,25 @@ html,
 body {
   width: 100%;
   height: 100%;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Lucida Sans Regular", Geneva, Verdana, sans-serif;
 }
 
 ul {
   list-style-type: none;
   display: flex;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(59, 138, 202);
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .container {
@@ -30,18 +42,23 @@ ul {
   height: 630px;
   background: grey;
   position: relative;
+  color: white;
+  text-align: center;
 }
 
 .header-nav {
-  width: 75%;
-  height: 45px;
-  background: rgb(172, 172, 172);
+  width: 980px;
+  height: 35px;
+  background: linear-gradient(to bottom, rgb(134, 134, 134) 5%, rgb(122, 122, 122) 50%, rgb(116, 116, 116) 51%, rgb(104, 104, 104) 8%, rgb(124, 124, 124) 94%);
   position: absolute;
+  font-size: 14px;
   top: 75px;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 4px;
+  border:  1px solid rgb(109, 109, 109);
 }
 
 .header-nav__menu {
@@ -49,19 +66,49 @@ ul {
   height: 100%;
   justify-content: space-evenly;
   align-items: center;
-  background: green;
+}
+
+.header-nav input {
+  width: 115px;
+  border-radius: 10px;
+  border: none;
 }
 
 .h-nav-item {
-  border-right: 1px solid white;
+  padding: 0 35px;
+  position: relative;
+  flex-basis: 0;
 }
 
-.h-nav-item:last-child {
-  border-right: none;
+.svg-search {
+  width: 15px;
+  height: 14px;
+  position: absolute;
+  left: 39px;
+  top: 2px;
 }
+
+/* .h-nav-item::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 102px;
+  display: block;
+  height: 35px;
+  width: 3px;
+  background: rgb(107, 107, 107);
+  border-left: 1px solid rgb(139, 139, 139);
+  border-right: 1px solid rgb(139, 139, 139);
+}
+
+.h-nav-item:last-of-type::after {
+  position: static;
+  content: normal;
+} */
 
 .header-text-container {
   position: relative;
+  font-weight: lighter;
   top: -30px;
   height: 100%;
   width: 100%;
@@ -73,6 +120,17 @@ ul {
 
 .header-subhead {
   width: 50%;
+  padding: 25px 0;
+}
+
+.header-cta {
+  height: 32px;
+  overflow: hidden;
+}
+
+.header-cta img:hover {
+  position: relative;
+  top: -32px;
 }
 
 .f-container {
