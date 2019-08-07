@@ -186,26 +186,21 @@ a:hover {
 }
 
 .f-container {
-  height: 175px;
+  min-height: 175px;
   display: flex;
-  justify-content: space-between;
   max-width: 1440px;
   min-width: 1024px;
   margin: 0 auto;
 }
 
 .f-item {
-  height: 100%;
+  object-fit: cover;
+  object-position: 50% 0;
   position: relative;
   overflow: hidden;
   border-right: 3px solid white;
   background: rgb(238, 238, 238);
   cursor: pointer;
-}
-
-.f-item img {
-  display: block;
-  text-align: center;
 }
 
 .f-item:last-of-type {
